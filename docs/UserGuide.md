@@ -38,7 +38,7 @@ CCA Manager is a **desktop app for managing contacts, optimized for use via a  L
 
    ▶️All commands you can try:
 
-   * [`add` : Adds a contact to the CCA Manager](#feature-add)
+   * [`add` : Adds a contact/CCA group to the CCA Manager](#feature-add)
 
    * [`list` : Lists all contacts](#feature-list)
 
@@ -51,10 +51,12 @@ CCA Manager is a **desktop app for managing contacts, optimized for use via a  L
    * [`clear` : Deletes all contacts](#feature-clear)
  
    * [`filter` : Filter by tags](#feature-filter)
+ 
+   * [`assign` : Assign roles to contact](#feature-assign)
 
    * [`exit` : Exits the app](#feature-exit)
      
-   * $${\color{green}More \space features \space will \space be \space coming \space in \space v1.2}$$
+   * $${\color{green}More \space features \space will \space be \space coming \space in \space future \space update}$$
 
 ### Further Help
  Refer to the [Features](#features) below for details of each command.⬇️⬇️⬇️⬇️
@@ -109,6 +111,11 @@ _Shows a message explaning how to access the help page._
 _Adds a person to the CCA Manager._
 
 **Format**: `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​`
+
+_Adds a CCA group to the CCA manager._
+
+**Format**: `add c/CCA GROUP`
+
 
 <box type="tip" seamless>
   
@@ -197,6 +204,16 @@ _Filter people with existing tags._
 
 **[Images with example is TBD]**
 
+### <span id='feature-assign'> assign roles to contact: `assign` </span>
+
+_Assign roles to contact._
+
+**Format**: `assign INDEX r/ ROLE`
+* The index refers to the index number shown in the displayed person list.
+* The index **must be a positive integer** 1, 2, 3, …​
+
+**[Images with example is TBD]**
+
 ### <span id='feature-exit'> Exiting the program : `exit` </span>
 
 _Exits the program._
@@ -218,19 +235,6 @@ CCA Manager data are saved automatically as a JSON file `[JAR file location]/dat
 Furthermore, certain edits can cause the CCA Manager to behave in unexpected ways (e.g., if a value entered is outside the acceptable range). Therefore, edit the data file only if you are confident that you can update it correctly.
 </box>
 
-### Assign roles to contacts`[coming in v1.2]`
-
-_Manage CCA personnel_
-
-### Identify the exco members`[coming in v1.2]`
-
-_Inform them if I am unable to make it for the CCA session_
-
-### form groups of contacts`[coming in v1.2]`
-
-_Associate who belongs to what CCA_
-
-
 --------------------------------------------------------------------------------------------------------------------
 
 ## FAQ
@@ -249,12 +253,13 @@ _Associate who belongs to what CCA_
 ## Command summary
 
 Action     | Format, Examples
------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-**Add**    | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​` <br> e.g., `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague`
+-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Add**    | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG] c/CCA GROUP…​` <br> e.g., `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague c/CCA Cycling`
 **Clear**  | `clear`
 **Delete** | `delete INDEX`<br> e.g., `delete 3`
 **Edit**   | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]…​`<br> e.g.,`edit 2 n/James Lee e/jameslee@example.com`
 **Find**   | `find KEYWORD [MORE_KEYWORDS]`<br> e.g., `find James Jake`
 **List**   | `list`
 **Filter** | `filter Tags` e.g. `filter friends`
+**Assign** | `Assign INDEX /r ROLE` e.g. `Assign 2 /r Member`
 **Help**   | `help`
