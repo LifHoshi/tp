@@ -274,64 +274,123 @@ _{Explain here how the data archiving feature will be implemented}_
 
 **Target user profile**:
 
-* has a need to manage a significant number of contacts
+* has a need to manage a significant amount of CCA information (such as contacts, roles and details)
 * prefer desktop apps over other types
 * can type fast
 * prefers typing to mouse interactions
 * is reasonably comfortable using CLI apps
 
-**Value proposition**: manage contacts faster than a typical mouse/GUI driven app
+**Value proposition**: manage CCA information faster than a typical mouse/GUI driven app
 
 
 ### User stories
 
 Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unlikely to have) - `*`
 
-| Priority | As a …​                                    | I want to …​                 | So that I can…​                                                        |
-|----------|--------------------------------------------|------------------------------|------------------------------------------------------------------------|
-| `* * *`  | new user                                   | see usage instructions       | refer to instructions when I forget how to use the App                 |
-| `* * *`  | user                                       | add a new person             |                                                                        |
-| `* * *`  | user                                       | delete a person              | remove entries that I no longer need                                   |
-| `* * *`  | user                                       | find a person by name        | locate details of persons without having to go through the entire list |
-| `* *`    | user                                       | hide private contact details | minimize chance of someone else seeing them by accident                |
-| `*`      | user with many persons in the address book | sort persons by name         | locate a person easily                                                 |
+| Priority | As a …​                   | I want to …​              | So that I can…​                                           |
+|----------|---------------------------|---------------------------|-----------------------------------------------------------|
+| `* * *`  | `EXCO Member` | Assign roles to contacts  | manage my `CCA Member`s                                   |
+| `* * *`  | `CCA Member`                | Identify the `EXCO Member`s | Inform them if I am unable to make it for the CCA session |
+| `* * *`  | `EXCO Member` | Form groups of contacts   | associate who belongs to what CCA                         |
+|   |                           |                           |                                                           |
+|    |                       |                           |                                                           |
+|    |                           |                           |                                                           |
 
 *{More to be added}*
 
 ### Use cases
 
-(For all use cases below, the **System** is the `AddressBook` and the **Actor** is the `user`, unless specified otherwise)
+(For all use cases below, the **System** is the `CCA Manager` and the **Actor** are the `EXCO Member`s and `CCA Member`s, unless specified otherwise)
 
-**Use case: Delete a person**
+#### UC01 - Assign roles to contacts
 
 **MSS**
 
-1.  User requests to list persons
-2.  AddressBook shows a list of persons
-3.  User requests to delete a specific person in the list
-4.  AddressBook deletes the person
-
-    Use case ends.
+```
+1.  User requests to list contacts
+2.  `CCA Manager` shows a list of contacts
+3.  User requests to assign role to the contact
+4.  `CCA Manager` assigns role to that contact
+Use case ends.
+```
 
 **Extensions**
 
-* 2a. The list is empty.
+```
+2a. Provided Non-Integer input for `Index of Contacts`.
+    2a1. `CCA Manager` shows an error message. 
+    Use case resumes at step 2
 
-  Use case ends.
+3a. Provided Integer that is out of range of index
+    3a1. `CCA Manager` shows an error message.
+    Use case resumes at step 2
 
-* 3a. The given index is invalid.
+4a. Invalid `Role Name`
+    Use case ends.
 
-    * 3a1. AddressBook shows an error message.
+5a. Neglected to input `r` or `c` character prior to name
+    5a1. `CCA Manager` shows an error message.
+    Use case resumes at step 2
+```
 
-      Use case resumes at step 2.
+
+#### UC02 - Form groups of contacts
+
+**MSS**
+
+```
+1.  User requests to list contacts
+2.  `CCA Manager` shows a list of contacts
+3.  User requests to form a group for a list of contacts
+4.  `CCA Manager` forms a group for a list of contacts
+Use case ends.
+```
+
+**Extensions**
+
+```
+2a. Provided Non-Integer input for `Index of Contacts`.
+    2a1. `CCA Manager` shows an error message.
+    Use case resumes at step 2
+
+3a. Provided Integer that is out of range of index
+    3a1. `CCA Manager` shows an error message.
+    Use case resumes at step 2
+
+4a. Invalid `Group Name`
+    Use case ends.
+
+5a. Invalid `Index of Contacts`
+    Use case ends.
+```
+
+#### UC03 - Identify the EXCO members
+
+**MSS**
+
+```
+1.  User requests to view the contacts in the EXCO group
+2.  AddressBook shows a list of contacts in the EXCO group
+Use case ends.
+```
 
 *{More to be added}*
 
 ### Non-Functional Requirements
 
-1.  Should work on any _mainstream OS_ as long as it has Java `11` or above installed.
-2.  Should be able to hold up to 1000 persons without a noticeable sluggishness in performance for typical usage.
-3.  A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.
+1. Compatibility:
+    1. Should work on any _mainstream OS_ as long as it has Java `11` or above installed.
+1. Performance:
+    1. Should be able to hold up to 1000 persons without a noticeable sluggishness in performance for typical usage.
+    1. GUI should respond/provide feedback within 2s.
+1. Usability:
+    1. A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.
+    1. A new user should be able to navigate the functionality of the program with ease.
+    1. The GUI should be readable with sufficient contrast between UI elements.
+1. Process:
+    1. The project is expected to adhere to a schedule that delivers a feature set every one month.
+1. Constraints:
+    1. The project should be implementable in 4 weeks.
 
 *{More to be added}*
 
@@ -339,6 +398,13 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 * **Mainstream OS**: Windows, Linux, Unix, MacOS
 * **Private contact detail**: A contact detail that is not meant to be shared with others
+* **CCA Manager**: The name used to refer to this project
+* **CCA**: Refers to the student organisation which `CCA Manager` intends to simplify the administration of. 
+* **EXCO Member**: A target user group. Refers to a member that is in-charge of the organisation of a `CCA`.
+* **CCA Member**: A target user group. Refers to a member that partakes in the activities of a `CCA`.
+* **Contact**: An object that refers to a person. It is the core object of administration in **CCA Manager**. 
+* **Role**: Part of the metadata of a `contact`. It classifies a `contact` based on their responsibilities in the CCA.
+* **Group**: Part of the metadata of a `contact`. It allows `contact`s to be organised in groups the user can manage seperately.
 
 --------------------------------------------------------------------------------------------------------------------
 
