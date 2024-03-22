@@ -7,10 +7,10 @@ skinparam ClassBackgroundColor #FFFFAA
 title After command "filter"
 
 package States <<rectangle>> {
-    class State1 as "<u>ab0:AddressBook</u>"
-    class State2 as "<u>ab1:AddressBook</u>"
-    class State3 as "<u>ab3:AddressBook</u>"
-    class State4 as "<u>ab4:AddressBook</u>"
+    class State1 as "<u>cm0:CCA Manager</u>"
+    class State2 as "<u>cm1:CCA Manager</u>"
+    class State3 as "<u>cm3:CCA Manager</u>"
+    class State4 as "<u>cm4:CCA Manager</u>"
 }
 
 State1 -[hidden]right-> State2
