@@ -54,61 +54,6 @@ Action     | Format, Examples
 </ul></details></li> <!--End 4-->
 
 
-
-
----
-  layout: default.md
-  title: "User Guide"
-  pageNav: 3
----
-
-# CCA Manager User Guide
-
-CCA Manager is a **desktop app for managing contacts, optimized for use via a  Line Interface** (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB3 can get your contact management tasks done faster than traditional GUI apps.
-
-<!-- * Table of Contents -->
-<page-nav-print />
-
---------------------------------------------------------------------------------------------------------------------
-
-## Quick start
-
-1. Ensure you have Java `11` or above installed in your Computer.
-
-1. Download the latest `ccamanager.jar` from [here](https://github.com/se-edu/addressbook-level3/releases).
-
-1. Copy the file to the folder you want to use as the _home folder_ for your CCA Manager.
-
-1. Open a command terminal, `cd` into the folder you put the jar file in, and use the `java -jar ccamanager.jar` command to run the application.<br>
-
-   ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png)
-   **A GUI similar to the below should appear in a few seconds. Note how the app contains some sample data.**<br>
-   
-   ![Ui](images/Ui.png)
-
-1. Type the command in the command box and press Enter to execute it. e.g. typing **`help`** and pressing Enter will open the help window.<br>
-   Some example commands you can try:
-
-   * `list` : Lists all contacts.
-
-   * [`add` : Adds a contact/CCA group to the CCA Manager](#feature-add)
-
-   * `delete 3` : Deletes the 3rd contact shown in the current list.
-
-   * `clear` : Deletes all contacts.
-
-   * `exit` : Exits the app.
-
-   * [`clear` : Deletes all contacts](#feature-clear)
- 
-   * [`filter` : Filter by tags](#feature-filter)
- 
-   * [`assign` : Assign roles to contact](#feature-assign)
-
-   * [`exit` : Exits the app](#feature-exit)
-     
-   * $${\color{green}More \space features \space will \space be \space coming \space in \space future \space update}$$
-
 ### Further Help
  Refer to the [Features](#features) below for details of each command.⬇️⬇️⬇️⬇️
 
