@@ -11,7 +11,6 @@ import static seedu.address.logic.commands.CommandTestUtil.VALID_PHONE_BOB;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_ROLE_FRIEND;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_ROLE_HUSBAND;
 
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
