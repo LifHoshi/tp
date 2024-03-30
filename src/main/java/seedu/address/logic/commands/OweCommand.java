@@ -60,7 +60,7 @@ public class OweCommand extends Command {
         return amount;
     }
 
-    // Solution below (equals method) is adapted from original AB3 author lzq. 
+    // Solution below (equals method) is adapted from original AB3 author lzq.
     @Override
     public boolean equals(Object other) {
         return other == this // short circuit if same object
