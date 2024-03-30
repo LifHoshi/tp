@@ -14,6 +14,7 @@ public class Amount {
     private static final String AMOUNT_VALIDATION_REGEX = "(?!0\\d)\\d+(\\.\\d{1,2})?";
 
     public final String value;
+
     /**
      * Constructs a {@code Amount}.
      *

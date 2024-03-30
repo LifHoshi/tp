@@ -11,9 +11,8 @@ import seedu.address.model.amount.Amount;
 
 /**
  * Parses input arguments and creates a new OweCommand object
- */
+ **/
 public class OweCommandParser implements Parser<OweCommand> {
-
     /**
      * Parses the given {@code String} of arguments in the context of the OweCommand
      * and returns an OweCommand object for execution.
@@ -23,7 +22,6 @@ public class OweCommandParser implements Parser<OweCommand> {
         requireNonNull(args);
         args = args.toLowerCase();
         ArgumentMultimap argMultimap = ArgumentTokenizer.tokenize(args, PREFIX_AMOUNT);
-
         Index index;
 
         try {
