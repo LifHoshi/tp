@@ -63,8 +63,8 @@ public class OweCommand extends Command {
     public boolean equals(Object other) {
         return other == this // short circuit if same object
                 || (other instanceof OweCommand // instanceof handles nulls
-                        && index.equals(((OweCommand) other).index)
-                        && amount.equals(((OweCommand) other).amount));
+                && index.equals(((OweCommand) other).index)
+                && amount.equals(((OweCommand) other).amount));
     }
     @Override
     public CommandResult execute(Model model) throws CommandException {
@@ -81,7 +81,7 @@ public class OweCommand extends Command {
         model.setPerson(personToOwe, owedPerson);
         return new CommandResult(String.format("Owed Person: $%s", owedPerson.getAmount().toString()));
     }
-    
+
     private static Person createOwedPerson(Person personToOwe, Amount amount) {
         assert personToOwe != null;
         Name updatedName = personToOwe.getName();
