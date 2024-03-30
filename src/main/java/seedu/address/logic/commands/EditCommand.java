@@ -107,7 +107,8 @@ public class EditCommand extends Command {
         Set<Cca> updatedCcas = editPersonDescriptor.getCcas().orElse(personToEdit.getCcas());
         Amount updatedAmount = personToEdit.getAmount();
 
-        return new Person(updatedName, updatedPhone, updatedEmail, updatedAddress, updatedRoles, updatedCcas, updatedAmount);
+        return new Person(updatedName, updatedPhone, updatedEmail, updatedAddress,
+                updatedRoles, updatedCcas, updatedAmount);
     }
 
     @Override

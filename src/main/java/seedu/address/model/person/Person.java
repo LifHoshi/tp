@@ -8,9 +8,10 @@ import java.util.Objects;
 import java.util.Set;
 
 import seedu.address.commons.util.ToStringBuilder;
+import seedu.address.model.amount.Amount;
 import seedu.address.model.cca.Cca;
 import seedu.address.model.roles.Role;
-import seedu.address.model.amount.Amount;
+
 
 /**
  * Represents a Person in the address book.

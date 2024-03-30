@@ -10,7 +10,8 @@ import static seedu.address.commons.util.AppUtil.checkArgument;
  * is valid as declared in {@link #isValidAmount(String)}
  */
 public class Amount {
-    public static final String MESSAGE_CONSTRAINTS = "Amount should only contain correct numbers with no more than 2 decimal places\n"
+    public static final String MESSAGE_CONSTRAINTS = "Amount should only contain correct numbers"
+            + "with no more than 2 decimal places\n"
             + "and it should not be blank or negative";
     public static final String MESSAGE_NUMBER_CONSTRAINTS = "Amount should not be negative";
     private static final String AMOUNT_VALIDATION_REGEX = "(?!0\\d)\\d+(\\.\\d{1,2})?";

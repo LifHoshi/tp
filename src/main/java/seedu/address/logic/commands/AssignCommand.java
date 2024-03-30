@@ -98,7 +98,8 @@ public class AssignCommand extends Command {
         Set<Role> updatedRoles = assignPersonDescriptor.getRole().orElse(personToAssign.getRoles());
         Amount updatedAmount = personToAssign.getAmount();
 
-        return new Person(updatedName, updatedPhone, updatedEmail, updatedAddress, updatedRoles, updatedCcas, updatedAmount);
+        return new Person(updatedName, updatedPhone, updatedEmail, updatedAddress,
+                updatedRoles, updatedCcas, updatedAmount);
     }
 
     /**
