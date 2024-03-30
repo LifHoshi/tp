@@ -35,21 +35,21 @@ public class OweCommandTest {
     }
 
     @Test
-        public void equals() {
-            Amount amount = new Amount("10.00");
-            final OweCommand standardCommand = new OweCommand(INDEX_FIRST_PERSON, amount);
-    
-            // same values -> returns true
-            OweCommand commandWithSameValues = new OweCommand(INDEX_FIRST_PERSON, amount);
-            assertTrue(standardCommand.equals(commandWithSameValues));
-    
-            // same object -> returns true
-            assertTrue(standardCommand.equals(standardCommand));
-    
-            // null -> returns false
-            assertTrue(!standardCommand.equals(null));
+    public void equals() {
+        Amount amount = new Amount("10.00");
+        final OweCommand standardCommand = new OweCommand(INDEX_FIRST_PERSON, amount);
 
-            // different index -> returns false
-            assertTrue(!standardCommand.equals(new OweCommand(INDEX_SECOND_PERSON, amount)));
-        }
+        // same values -> returns true
+        OweCommand commandWithSameValues = new OweCommand(INDEX_FIRST_PERSON, amount);
+        assertTrue(standardCommand.equals(commandWithSameValues));
+
+        // same object -> returns true
+        assertTrue(standardCommand.equals(standardCommand));
+
+        // null -> returns false
+        assertTrue(!standardCommand.equals(null));
+
+        // different index -> returns false
+        assertTrue(!standardCommand.equals(new OweCommand(INDEX_SECOND_PERSON, amount)));
+    }
 }

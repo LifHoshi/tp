@@ -37,9 +37,11 @@ public class JsonAdaptedAmount {
     }
 
     /**
-     * Converts this Jackson-friendly adapted amount object into the model's {@code Amount} object.
+     * Converts this Jackson-friendly adapted amount object into the model's
+     * {@code Amount} object.
      *
-     * @throws IllegalValueException if there were any data constraints violated in the adapted amount.
+     * @throws IllegalValueException if there were any data constraints violated in
+     *                               the adapted amount.
      */
     public Amount toModelType() throws IllegalValueException {
         if (!Amount.isValidAmount(value)) {

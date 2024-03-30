@@ -5,8 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import java.util.Objects;
-
 import org.junit.jupiter.api.Test;
 import seedu.address.storage.JsonAdaptedAmount;
 
@@ -34,7 +32,7 @@ public class AmountTest {
         Amount amount = new Amount("30");
         int expectedHashCode = Double.hashCode(30);
         assertEquals(expectedHashCode, amount.hashCode());
-}
+    }
 
     @Test
     public void testToString() {
@@ -52,17 +50,17 @@ public class AmountTest {
         assertFalse(amount.equals(null));
         assertFalse(amount.equals("100"));
     }
-    
+
     @Test
-      public void testCompareTo() {
-          Amount amount = new Amount("100");
-          Amount amount2 = new Amount("100");
-          Amount amount3 = new Amount("200");
-          assertEquals(amount.compareTo(amount2), 0);
-          assertEquals(amount.compareTo(amount3), -1);
-          assertEquals(amount3.compareTo(amount), 1);
-      }
-      
+    public void testCompareTo() {
+        Amount amount = new Amount("100");
+        Amount amount2 = new Amount("100");
+        Amount amount3 = new Amount("200");
+        assertEquals(amount.compareTo(amount2), 0);
+        assertEquals(amount.compareTo(amount3), -1);
+        assertEquals(amount3.compareTo(amount), 1);
+    }
+
     @Test
     public void testJsonAdaptedAmount() {
         JsonAdaptedAmount jsonAdaptedAmount = new JsonAdaptedAmount(new Amount("100"));
