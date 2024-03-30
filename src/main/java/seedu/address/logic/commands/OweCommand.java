@@ -1,3 +1,5 @@
+// Part of the code is adpatated from original AB3 Code. All credits and thanks to the original
+// CS2103T teaching team for this.
 package seedu.address.logic.commands;
 
 import static java.util.Objects.requireNonNull;
@@ -25,6 +27,7 @@ import seedu.address.model.roles.Role;
 public class OweCommand extends Command {
     public static final String COMMAND_WORD = "owe";
 
+    // MESSAGE_USAGE below is modified from my Teammate's (AlphaJae) code
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Owes the details of the person identified "
             + "by the index number used in the displayed person list. "
             + "Existing values will be overwritten by the input values.\n"
@@ -57,6 +60,7 @@ public class OweCommand extends Command {
         return amount;
     }
 
+    // Solution below (equals method) is adapted from original AB3 author lzq. 
     @Override
     public boolean equals(Object other) {
         return other == this // short circuit if same object

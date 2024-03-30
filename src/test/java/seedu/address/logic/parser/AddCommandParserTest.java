@@ -64,7 +64,7 @@ public class AddCommandParserTest {
                 .withAmount("0.0").build();
         assertParseSuccess(parser,
                 NAME_DESC_BOB + PHONE_DESC_BOB + EMAIL_DESC_BOB + ADDRESS_DESC_BOB + ROLE_DESC_HUSBAND
-                        + ROLE_DESC_FRIEND + CCA_DESC_DEFAULT, 
+                        + ROLE_DESC_FRIEND + CCA_DESC_DEFAULT,
                 new AddCommand(expectedPersonMultipleRoles));
     }
 

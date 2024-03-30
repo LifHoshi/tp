@@ -1,3 +1,6 @@
+// Some of the code is inspired by the AddCommandParser.java. All credits and thanks to the original
+// CS2103T teaching team for this.
+
 package seedu.address.logic.parser;
 
 import static java.util.Objects.requireNonNull;
