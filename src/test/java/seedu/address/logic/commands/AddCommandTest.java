@@ -158,13 +158,7 @@ public class AddCommandTest {
         public void updateFilteredPersonList(Predicate<Person> predicate) {
             throw new AssertionError("This method should not be called.");
         }
-
-        @Override
-        public boolean hasOwePerson(Person person, Amount amount) {
-            return false;
-        }
     }
-
     /**
      * A Model stub that contains a single person.
      */
