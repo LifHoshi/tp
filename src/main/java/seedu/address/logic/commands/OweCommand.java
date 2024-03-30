@@ -35,7 +35,6 @@ public class OweCommand extends Command {
 
     public static final String MESSAGE_OWE_PERSON_SUCCESS = "Owed Person: %1$s";
     public static final String MESSAGE_NOT_OWE = "Amount should be provided here.";
-
     private final Index index;
     private final Amount amount;
 
@@ -46,7 +45,6 @@ public class OweCommand extends Command {
     public OweCommand(Index index, Amount amount) {
         requireNonNull(index);
         requireNonNull(amount);
-
         this.index = index;
         this.amount = amount;
     }
