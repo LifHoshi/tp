@@ -8,6 +8,8 @@ import static seedu.address.logic.commands.CommandTestUtil.VALID_EMAIL_BOB;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_NAME_BOB;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_PHONE_BOB;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_ROLE_HUSBAND;
+import static seedu.address.logic.commands.CommandTestUtil.VALID_AMOUNT;
+
 import static seedu.address.testutil.Assert.assertThrows;
 import static seedu.address.testutil.TypicalPersons.ALICE;
 import static seedu.address.testutil.TypicalPersons.BOB;
@@ -94,7 +96,7 @@ public class PersonTest {
     public void toStringMethod() {
         String expected = Person.class.getCanonicalName() + "{name=" + ALICE.getName() + ", phone=" + ALICE.getPhone()
                 + ", email=" + ALICE.getEmail() + ", address=" + ALICE.getAddress() + ", roles=" + ALICE.getRoles()
-                + ", CCAs=" + ALICE.getCcas() + "}";
+                + ", CCAs=" + ALICE.getCcas() + ", amount=" + ALICE.getAmount() + "}";
         assertEquals(expected, ALICE.toString());
     }
 }
