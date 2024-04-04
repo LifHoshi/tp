@@ -252,7 +252,7 @@ Format: cca_delete c/CCA
 ### Remove or show CCA details: `cca display/cca remove`
 show the details of the current CCA and remove a current CCA
 
-Format: cca display c/CCA 
+Format: cca display c/CCA or
         cca remove c/CCA
 
 ### Charge a person with an amount of money: `charge`
@@ -263,13 +263,14 @@ Format: charge m/AMOUNT c/NUS CCA r/ROLES
 ### Track attendance: `setatt`
 Set attendance for each person
 
+Format: setatt INDEX att/NUMBER s/NUMBER
+
 ### Filter by CCA and roles: `filter`
 Filter the current list with CCA and roles
 
-Format: filter c/CCA r/ROLES
+Format: filter c/CCA r/ROLES or 
         filter CCA1, CCA2, ...
 
-Format: setatt INDEX att/NUMBER s/NUMBER
 
 --------------------------------------------------------------------------------------------------------------------
 
