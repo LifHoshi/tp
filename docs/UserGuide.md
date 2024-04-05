@@ -408,7 +408,8 @@ Format: cca display c/CCA
 ### Charge a person with an amount of money: `charge`
 Charge a person with an amount of money by CCA and role
 
-Format: charge m/AMOUNT c/NUS CCA r/ROLES
+Format: charge m/AMOUNT c/NUS CCA [r/ROLES]
+`[]` - Denotes optional
 
 ### Filter by CCA and roles: `filter`
 Filter the current list with CCA and roles
