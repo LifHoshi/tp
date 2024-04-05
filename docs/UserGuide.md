@@ -415,7 +415,6 @@ Format: charge m/AMOUNT c/NUS CCA [r/ROLES]
 Filter the current list with CCA and roles
 
 Format: filter c/CCA r/ROLES
-        filter CCA1, CCA2, ...
 
 ### Track attendance: `setatt`
 Set attendance for each person
