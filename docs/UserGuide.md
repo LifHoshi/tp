@@ -268,8 +268,7 @@ Format: setatt INDEX att/NUMBER s/NUMBER
 ### Filter by CCA and roles: `filter`
 Filter the current list with CCA and roles
 
-Format: filter c/CCA r/ROLES or 
-        filter CCA1, CCA2, ...
+Format: filter c/CCA r/ROLES
 
 
 --------------------------------------------------------------------------------------------------------------------
