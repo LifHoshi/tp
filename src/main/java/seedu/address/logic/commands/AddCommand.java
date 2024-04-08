@@ -28,14 +28,15 @@ public class AddCommand extends Command {
             + PREFIX_PHONE + "PHONE "
             + PREFIX_EMAIL + "EMAIL "
             + PREFIX_ADDRESS + "ADDRESS "
-            + "[" + PREFIX_ROLE + "ROLE]...\n"
+            + PREFIX_ROLE + "ROLE "
+            + PREFIX_METADATA + "METADATA "
+            + PREFIX_CCA + "CCA\n"
             + "Example: " + COMMAND_WORD + " "
             + PREFIX_NAME + "John Doe "
             + PREFIX_PHONE + "98765432 "
             + PREFIX_EMAIL + "johnd@example.com "
             + PREFIX_ADDRESS + "311, Clementi Ave 2, #02-25 "
             + PREFIX_ROLE + "friends "
-            + PREFIX_ROLE + "owesMoney "
             + PREFIX_METADATA + "I have food allegeries - Egg and Peanuts "
             + PREFIX_CCA + "NUS Cycling";
 
