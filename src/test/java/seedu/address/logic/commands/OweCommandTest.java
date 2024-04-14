@@ -1,4 +1,4 @@
-// Part of the code is adpatated from original AB3 Code. All credits and thanks to the original
+// Part of the code is adapted from original AB3 Code. All credits and thanks to the original
 // CS2103T teaching team for this.
 package seedu.address.logic.commands;
 
@@ -53,9 +53,10 @@ public class OweCommandTest {
         assertEquals(expectedIndex, oweCommand.getIndex());
     }
 
+    // The testGetAmount() is adapted from ChatGPT. (Reason: Quick add a simple test)
     @Test
     public void testGetAmount() {
-        Amount expectedAmount = new Amount("100.0"); // replace with your expected Amount
+        Amount expectedAmount = new Amount("100.0");
         OweCommand oweCommand = new OweCommand(INDEX_FIRST_PERSON, expectedAmount);
         assertEquals(expectedAmount, oweCommand.getAmount());
     }
