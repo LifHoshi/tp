@@ -64,7 +64,7 @@ public class OweCommandTest {
     public void testCreateOwedPerson() {
         // Arrange
 
-        Person personToOwe = new Person(new Name("temp2"), new Phone("94351253"),
+        Person personToOwe = new Person(new Name("temp"), new Phone("94351252"),
                 new Email("ewe@gmail.com"), new Address("secret"), Role.createRoleSet("member"),
                 Cca.createCcaSet(), new Amount("100.0"), new Attendance("3"), new Sessions("5"),
                 new Metadata("eating"));
