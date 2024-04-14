@@ -1,6 +1,8 @@
 // Part of the code is adpatated from original AB3 Code. All credits and thanks to the original
 // CS2103T teaching team for this.
 package seedu.address.logic.commands;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandFailure;
@@ -8,7 +10,6 @@ import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
 import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND_PERSON;
 import static seedu.address.testutil.TypicalPersons.getTypicalAddressBook;
 
-import org.junit.jupiter.api.Test;
 
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.Messages;
@@ -32,6 +33,13 @@ public class OweCommandTest {
         OweCommand oweCommand = new OweCommand(outOfBoundIndex, amount);
 
         assertCommandFailure(oweCommand, model, Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
+    }
+
+    @Test
+    public void testGetIndex() {
+            Index expectedIndex = Index.fromOneBased(1);
+            OweCommand oweCommand = new OweCommand(expectedIndex, new Amount("10.00"));
+            assertEquals(expectedIndex, oweCommand.getIndex());
     }
 
     @Test
