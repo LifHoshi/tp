@@ -538,7 +538,7 @@ A person is added to CCA Manager with the information provided in the command, a
 
 - Incorrect format of parameters.
 - Incorrect order of parameters.
-- Didn't match minimum parameters' requirements (A contact must have name, phone, email, address).
+- Didn't match minimum parameters requirements (A contact must have name, phone, email, address).
 
 {{ navigateback(navigationlinks) }}
 

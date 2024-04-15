@@ -255,22 +255,22 @@ _{more aspects and alternatives to be added}_
 
 _{Explain here how the data archiving feature will be implemented}_
 
-### \[Proposed\] Track a person owing money
+### Track a person owing money
 
 In order to better manage a CCA, we create a functionality that allows EXCO to
 set up the amount of money a person owes. An example command is `owe 1 m/10.00`.
 This means that the first person shown in the list will have an owe of $10.00.
-The general processes are:
+The general steps are:
 
-1. Check the current list of contacts to see whether the list is null or not.
-2. If it is null, throw the exceptions, otherwise check the validation of the index
-3. Lastly, checking the validation of the amount number, we make sure that the amount owed cannot be blank, 
-negative, or more than 2 decimals
+1. Check the current list of contacts to see whether the list is `null` or not.
+2. If it is `null`, throw an exception, otherwise validate the index.
+3. Lastly, validate the amount, we make sure that the amount owed cannot be blank, 
+negative, or more than 2 decimal places.
 
-If any of the parameters provided are valid, then the person shown on the list will successfully update
+If all of the parameters provided are valid, then the person shown on the list will successfully update
 the amount of user typed. Otherwise, the CCA Manager will show the corresponding warnings.
 
-### \[Proposed\] Payment splitting
+### Payment splitting
 
 After payments are implemented, we expect to be able to split payments among
 CCA members. An example command is ``split a/4.00 c/NUS Cycling``. Which means
