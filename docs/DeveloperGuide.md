@@ -257,18 +257,18 @@ _{Explain here how the data archiving feature will be implemented}_
 
 ### Track a person owing money
 
-In order to better manage a CCA, we create a functionality that allows EXCO to
-set up the amount of money a person owes. An example command is `owe 1 m/10.00`.
-This means that the first person shown in the list will have an owe of $10.00.
-The general steps are:
+In order to better manage a CCA, we created a functionality that allows executive
+committee members to track the amount of money a person owes. Take for example this command `owe 1 m/10.00`.
+As a result of this command, the first person listed will now owe $10.00.
+The general process is as follows:
 
-1. Check the current list of contacts to see whether the list is `null` or not.
-2. If it is `null`, throw an exception, otherwise validate the index.
-3. Lastly, validate the amount, we make sure that the amount owed cannot be blank, 
-negative, or more than 2 decimal places.
+1. Check if the current list of contacts is empty.
+2. If it is empty, throw an exception, otherwise check if the provided index is valid.
+3. Lastly, check if the amount number is valid, the amount number is not allowed to be empty, 
+negative, or have more than 2 decimals.
 
-If all of the parameters provided are valid, then the person shown on the list will successfully update
-the amount of user typed. Otherwise, the CCA Manager will show the corresponding warnings.
+If all the parameters provided are valid, the person shown on the list will successfully be updated
+the amount provided by the user. Otherwise, CCA Manager will display corresponding warnings.
 
 ### Payment splitting
 
