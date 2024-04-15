@@ -833,7 +833,8 @@ This usually means the CCA or role was invalid.
 
 #### Track attendance: `setatt`
 
-Track contacts' attendance by recording the number of sessions attended out of the total sessions.
+Tracks the attendance of each contact by recording the number of attended sessions out of 
+the total number of sessions.
 
 ##### Command Format:
 
@@ -878,7 +879,7 @@ setatt 4 att/3 s/6
 
 - session number less than attendance
 - [_Index_](#glossary) out of range
-- Typed invalid number, number must be **non-negative**
+- Typed invalid number, number must be a **non-negative integer**
 
 Set attendance for each person
 
