@@ -260,15 +260,15 @@ _{Explain here how the data archiving feature will be implemented}_
 In order to better manage a CCA, we created a functionality that allows executive
 committee members to track the amount of money a person owes. Take for example this command `owe 1 m/10.00`.
 As a result of this command, the first person listed will now owe $10.00.
-The general process is as follows:
+The general steps are:
 
-1. Check if the current list of contacts is empty.
-2. If it is empty, throw an exception, otherwise check if the provided index is valid.
-3. Lastly, check if the amount number is valid, the amount number is not allowed to be empty, 
-negative, or have more than 2 decimals.
+1. Check the current list of contacts to see whether the list is `null` or not.
+2. If it is `null`, throw an exception, otherwise validate the index.
+3. Lastly, validate the amount, ensuring that the amount provided is not blank, 
+negative, or more than 2 decimal places.
 
-If all the parameters provided are valid, the person shown on the list will successfully be updated
-the amount provided by the user. Otherwise, CCA Manager will display corresponding warnings.
+If all the parameters provided are valid, the person shown on the list will be successfully updated
+to display the amount they owe as provided by the user. Otherwise, CCA Manager will display corresponding warnings.
 
 ### Payment splitting
 
