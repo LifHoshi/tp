@@ -164,6 +164,7 @@ mark {
 img {
     padding-bottom: 1em;
     padding-top: 1em;
+    max-width: 100%;
 }
 
 h1 {
